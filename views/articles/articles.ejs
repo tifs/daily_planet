@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="/index">Home</a></li>
+			<li><a href="../articles/articles">Articles</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</nav>
+	<h1>Read some articles, motherfucker</h1>
+
+	<% allArticles.forEach(function(article){ %>
+		<a href="/article/<%= article.id%>"><%= article.id%></a>
+		<br>
+		<%= article.title%>
+		<br>
+		<%= article.author%>
+		<br>
+	<% })%>
+
+	<a href="/articles/newarticle">Write an article</a>	
+</body>
+</html>
